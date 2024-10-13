@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <!--INTRODUCCION AL DOM Ejercicio 1
+    <p>Este es el primer parrafo</p>
+    <p>Este es el segundo parrafo</p>
+    <p>Este es el tercer parrafo</p>
+    <button onclick="cambiarColor()">Cambiar color</button>
+    <script>
+    function cambiarColor() {
+            // Obtener todos los elementos p en la página
+            const parrafos = document.querySelectorAll('p');
+            
+            // Iterar sobre cada párrafo y cambiar su color de texto a azul
+            parrafos.forEach(function(parrafo) {
+                parrafo.style.color = 'blue';
+            });
+          }   
+    </script>
+    -->
+    <!--Ejercicio 2
+    <h2>Ingresa tu texto</h2>
+    <form>
+        <input type="text" id="miTexto" placeholder="Escribe algo aquí">
+        <button type="button" onclick="mostrarAlerta()">Mostrar Alerta</button>
+    </form>
+
+    <script>
+        function mostrarAlerta() {
+            var texto = document.getElementById("miTexto").value;
+            alert("Has ingresado: " + texto);
+        }
+    </script>
+    -->
+    <!-- EVENTOS EN DOM Ejercicio 1
+    <h2>Lista de elementos</h2>
+    <ul id="miLista">
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+    </ul>
+
+    <script>
+        // Seleccionamos todos los elementos li dentro de la lista
+        var elementos = document.querySelectorAll('#miLista li');
+
+        // Añadimos un evento click a cada li
+        elementos.forEach(function(elemento) {
+            elemento.addEventListener('click', function() {
+                console.log("Has hecho clic en: " + this.textContent);
+            });
+        });
+    </script>
+    -->
+  <!--
+    <h2>Campo de texto y botones</h2>
+    <form>
+        <input type="text" id="miTexto" placeholder="Escribe algo aquí">
+        <br><br>
+        <button type="button" onclick="deshabilitarCampo()">Deshabilitar</button>
+        <button type="button" onclick="habilitarCampo()">Habilitar</button>
+    </form>
+
+    <script>
+        // Función para deshabilitar el campo de texto
+        function deshabilitarCampo() {
+            document.getElementById("miTexto").disabled = true;
+        }
+
+        // Función para habilitar el campo de texto
+        function habilitarCampo() {
+            document.getElementById("miTexto").disabled = false;
+        }
+    </script>
+  -->
+
+  <!--
+  <h2>Formulario de Correo Electrónico</h2>
+    <form id="correoForm">
+      <input type="email" id="correoInput" placeholder="Ingresa tu correo electrónico" required>
+      <button type="submit">Guardar Correo</button>
+    </form>
+    <div id="correoGuardado"></div>
+
+    <script>
+      function mostrarCorreo() {
+          const correoGuardado = localStorage.getItem('correo');
+          const correoDiv = document.getElementById('correoGuardado');
+          correoDiv.innerHTML = ''; 
+          
+          if (correoGuardado) {
+              correoDiv.innerHTML = `
+                  <p>Correo guardado: ${correoGuardado}</p>
+                  <button id="eliminarCorreo">Eliminar Correo</button>
+              `;
+
+              document.getElementById('eliminarCorreo').addEventListener('click', function() {
+                  localStorage.removeItem('correo');
+                  mostrarCorreo(); 
+              });
+          }
+      }
+      document.getElementById('correoForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const correo = document.getElementById('correoInput').value;
+          localStorage.setItem('correo', correo);
+          mostrarCorreo(); 
+      });
+      window.onload = function() {
+          mostrarCorreo();
+      };
+    </script>
+  -->
+  </body>
+</html>
